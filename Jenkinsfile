@@ -5,6 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 build 'PES2UG22CS518-1'
+                sh 'cd main'
+                sh 'g++ main.cpp -o output'
             }
         }
 
