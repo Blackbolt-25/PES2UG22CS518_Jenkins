@@ -5,13 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 build 'PES2UG22CS518-1'
-                sh 'g++ hello.cpp -o output'
             }
         }
 
         stage('Test') {
             steps {
-                sh './output'
+                build 'PES2UG22CS518-2'
             }
         }
 
